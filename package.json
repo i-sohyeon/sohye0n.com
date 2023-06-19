@@ -1,0 +1,55 @@
+{
+  "name": "gulp_v2",
+  "version": "1.0.0",
+  "description": "git config --global core.autocrlf true",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isohyeon/gulp_v2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "script": {
+    "dev": "gulp dev",
+    "build": "gulp build",
+    "deploy": "gulp deploy"
+  },
+  "bugs": {
+    "url": "https://github.com/isohyeon/gulp_v2/issues"
+  },
+  "homepage": "https://github.com/isohyeon/gulp_v2#readme",
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.19.4",
+    "@babel/register": "^7.18.9",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "babelify": "^10.0.0",
+    "csscomb": "^4.3.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-bro": "^2.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webserver": "^0.9.1",
+    "sass": "^1.55.0"
+  },
+  "dependencies": {
+    "clean-error": "^0.0.0-work-in-progress",
+    "del": "^7.0.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "typescript": "^4.8.4",
+    "uglifyify": "^5.0.2"
+  }
+}
