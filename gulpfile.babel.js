@@ -86,7 +86,7 @@ const webserver = () =>
    gulp
     .src("build")
     .pipe(ws({
-      port : "7000",
+      port : "5000",
       livereload: true,
       open: true,
     }));
