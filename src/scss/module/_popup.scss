@@ -1,0 +1,36 @@
+.popup {
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba($black, .7);
+  .popup-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-width: 80vw;
+    height: 84vh;
+    transform: translate(-50%, -50%);
+    .img-content {
+      width: 74vw;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .cancel-btn {
+    position: absolute;
+    top: 8%;
+    right: 8%;
+    width: 3vw;
+    cursor: pointer;
+    img {
+      width: 100%;
+    }
+  }
+}

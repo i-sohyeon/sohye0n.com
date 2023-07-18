@@ -1,0 +1,79 @@
+.left-text-box {
+  .project-careers {
+    margin-bottom: 2.083vw;
+    p, ul>li {
+      animation: glitch02 2s infinite;
+      color: $white;
+      text-shadow: 2px -2px 4px rgba(red, 1), -2px 2px 4px rgba(blue, 1);
+        @keyframes glitch02 {
+          0% {
+              text-shadow: 2px -2px 2px rgba(red, .8), -2px 2px 2px rgba(blue, .8)
+          }
+          20% {
+              text-shadow: -2px 2px 2px rgba(blue, .8), 2px -2px 2px rgba(lime, .6);
+          }
+          40% {
+              text-shadow: 2px -2px 2px rgba(lime, .6), -2px 2px 2px rgba(red, .8);
+          }
+          60% {
+              text-shadow: -2px 2px 2px rgba(red, .8), 2px -2px 2px rgba(blue, .8);
+          }
+          80% {
+              text-shadow: 2px -2px 2px rgba(blue, .8), -2px 2px 2px rgba(lime, .6);
+          }
+          100% {
+              text-shadow: -2px 2px 2px rgba(lime, .6), 2px -2px 2px rgba(red, .8);
+          }
+        }
+      }
+
+  }
+  .careers {
+      p, ul>li {
+        animation: glitch03 2s infinite;
+        color: #D1ED5D;
+        text-shadow: 2px -2px 2px rgba(white, 1), -2px 2px 2px rgba(blue, 1);
+        @keyframes glitch03 {
+          0% {
+              text-shadow: 1px -1px 2px rgba(white, 1), -1px 1px 2px rgba(blue, 1)
+          }
+          20% {
+              text-shadow: -1px 1px 2px rgba(blue, 1), 1px -1px 2px rgba(lime, 1);
+          }
+          40% {
+              text-shadow: 1px -1px 2px rgba(lime, 1), -1px 1px 2px rgba(white, 1);
+          }
+          60% {
+              text-shadow: -1px 1px 2px rgba(white, 1), 1px -1px 2px rgba(blue, 1);
+          }
+          80% {
+              text-shadow: 1px -1px 2px rgba(blue, 1), -1px 1px 2px rgba(lime, 1);
+          }
+          100% {
+              text-shadow: -1px 1px 2px rgba(lime, .6), 1px -1px 2px rgba(white, .8);
+          }
+        }
+      }
+    }
+    p {
+      margin-bottom: 0.781vw;
+
+      @include fontSize(1.823vw, 400);
+    }
+
+  li {
+    line-height: 2.45vw;
+    position: relative;
+    margin-top: 100px;
+    word-break: keep-all;
+    opacity: 0;
+
+    @include fontSize(1.25vw, 400);
+    &::before {
+      position: absolute;
+      left: -12px;
+      display: inline-block;
+      content: "-";
+    }
+  }
+}

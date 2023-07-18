@@ -1,0 +1,319 @@
+body {
+  min-height: 100vh;
+  // overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: $white;
+  background: $black;
+  @media #{$Small-Tablet} {
+      // overflow: scroll;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0px;
+    /* 스크롤바의 너비 */
+  }
+
+  // &::-webkit-scrollbar-thumb {
+  //   height: 20%; /* 스크롤바의 길이 */
+  //   background: rgba(#000000,.4); /* 스크롤바의 색상 */
+  //   border-radius: 10px;
+  // }
+
+  // &::-webkit-scrollbar-track {
+  //     background: #ffffff; /*스크롤바 뒷 배경 색상*/
+  // }
+  
+.bg-noise {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0.4;
+  }
+}
+
+
+// web
+@media all and (orientation:landscape) {
+  .app-common {
+    margin: 0px auto;
+    &.app-header {
+      width: 100%;
+      .header-wrap {
+        position: fixed;
+        z-index: 100;
+        left: 50%;
+        width: 90%;
+        height: 5.208vw;
+        transform: translateX(-50%);
+        .top-logo {
+          position: absolute;
+          top: 50%;
+          cursor: pointer;
+          transform: translateY(-50%);
+          img {
+            width: 7.187vw;
+            }
+          }
+        .logo-link {
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          ul {
+            display: flex;
+            width: 100%;
+            li {
+              margin-right: 0.5vw;
+              cursor: pointer;
+              &:last-child {
+                margin: 0 !important;
+                }
+              img{
+                width: 2.5vw;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    &.app-body {
+      section {
+        position: relative;
+        height: 100vh;
+        padding: 5.208vw 5.208vw 3.125vw 5.208vw;
+        @media all and (orientation:landscape) {
+          .main-content-wrap {
+            .top-btn-wrap {
+              text-align: center;
+              .top-btn {
+                position: absolute;
+                bottom: 8vh;
+                left: 50%;
+                transform: translateX(-50%);
+                &:hover {
+                  cursor: pointer;
+                }
+                &:hover>#click {
+                  opacity: 1 !important;
+                }
+                .click {
+                  position: absolute;
+                  top: 3vw;
+                  left: 50%;
+                  transition: 1s;
+                  transform: translateX(-50%);
+                  text-transform: uppercase;
+                  opacity: 0;
+                  color: $white;
+
+                  @include fontSize(2vw, 700);
+                  }
+                }
+                .border-line-img {
+                  width: 12vw;
+                  animation: borderLine 20s infinite linear;
+                }
+                @keyframes borderLine {
+                  from {
+                    transform: rotate(0deg);
+                  }
+                  to {
+                    transform: rotate(360deg);
+                  }
+                }
+                .arrow-down-img {
+                  position: absolute;
+                  bottom: 5vw;
+                  left: 49.5%;
+                  width: 3vw;
+                  width: 2.865vw;
+                  transform: translate(-50%);
+                  animation: arrowMove 5s infinite linear;
+                  @keyframes arrowMove {
+                    0% {
+                      bottom: -1vw;
+                    }
+                    50% {
+                      bottom: 3vw;
+                    }
+                    100% {
+                      bottom: -1vw;
+                    }
+                  }
+                }
+              }
+          .main-content {
+              display: grid;
+
+              grid-template-columns: 2fr 1fr;
+              .main-text-box {
+                .test {
+                  // position: relative;
+                  p {
+                    line-height: 9.375vw;
+                    // position: absolute;
+                    // top: 0;
+                    margin-left: -3000px;
+                    text-transform: uppercase;
+                    opacity: 0;
+                    color: $white;
+
+                    @include fontSize(6.563vw, 400);
+                  }
+                }
+              }
+            }
+          }
+        }
+
+          &.gallery-content {
+            padding: 0 !important;
+            .swiper {
+              width: 100%;
+              height: 100vh;
+              .swiper-slide {
+                font-size: 0.938vw;
+                position: relative;
+                padding: 4.167vw;
+                text-align: center;
+                background: $white;
+                .text-wrap {
+                  // position: absolute;
+                  z-index: 10;
+                  // bottom: 6.25vw;
+                  // left: 8.854vw;
+                  text-align: left;
+                  .project-title {
+                    width: 19.271vw;
+                    word-break: keep-all;
+                    color: $white;
+
+                    @include fontSize(4.688vw, 500);
+                  }
+                  .project-type {
+                    margin-bottom: 1.563vw;
+                    color: transparent;
+
+                    @include fontSize(4.167vw, 500);
+                  }
+                  .tag-wrap {
+                    display: flex;
+                    margin-bottom: 3.333vw;
+                    li {
+                      margin-right: 8px;
+                      padding: 5px 10px;
+                      color: $white;
+                      border: 1px solid $white;
+                      border-radius: 4px;
+
+                      @include fontSize(0.938vw, 500w);
+                    }
+                  }
+                  .project-link {
+                    a {
+                      text-decoration: none;
+                      color: $white;
+
+                      @include fontSize(1.563vw, 400);
+                    }
+                    a:hover {
+                      transition: 0.2s;
+                      text-shadow: 3px 3px 10px rgba($white, .9);
+                    }
+                  }
+                }
+              .img-wrap {
+                position: absolute;
+                top: 9.271vw;
+                right: 5.208vw;
+                overflow: hidden;
+                width: 62.5vw;
+                height: 35.417vw;
+                cursor: pointer;
+                border-radius: 5px;
+                background: #000;
+                box-shadow: 5px 5px 5px rgba($black, .05);
+
+                object-fit: cover;
+                  &:after {
+                    display: inline-block;
+                    clear: both;
+                    content: "";
+                  }
+                  &:hover img {
+                    box-sizing: border-box;
+                    transform: scale(1.1);
+                  }
+
+                  img {
+                    width: 100%;
+                    height: 35.417vw;
+                    transition: all 0.8s linear;
+                    border-radius: 5px;
+
+                    object-fit: cover;
+                  }
+                }
+
+                &.slide-one {
+                  background: #fed500;
+                  .project-type {
+                    -webkit-text-stroke: 0.104vw #5815a5;
+                  }
+                }
+
+              &.slide-two {
+                background: #EC595C;
+                .project-type {
+                  -webkit-text-stroke: 0.104vw #1DA141;
+                }
+              }
+              &.slide-three {
+                background: #F3464A;
+                .project-type {
+                  -webkit-text-stroke: 0.104vw #8CF252;
+                }
+              }
+              &.slide-four {
+                background: #4051A8;
+                .project-type {
+                  -webkit-text-stroke: 0.104vw #F5ED45;
+                }
+              }
+              &.slide-five {
+                background: #3ABF71;
+                .project-type {
+                  -webkit-text-stroke: 0.104vw #514DBF;
+                }
+              }
+              &.slide-six {
+                background: #151E4A;
+                .project-type {
+                  -webkit-text-stroke: 0.104vw #8D78B0;
+                }
+              }
+              &.slide-seven {
+                background: #FF9B2A;
+                .project-type {
+                  -webkit-text-stroke: 0.104vw #0B29B3;
+                }
+              }
+              &.slide-eight {
+                background: #366DF2;
+                .project-type {
+                  -webkit-text-stroke: 0.104vw #F2DF29;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
