@@ -5,86 +5,76 @@ block content
     video.bg-noise(src="./video/bg-noise.mp4", type="viedeo/mp4" muted, autoplay, loop)
     
     section#content1
-      .main-content-wrap
-        .main-content
-          .main-text-box
-            .test
-              p.glitch ui &middot; ux
-              p.glitch web publisher
-              p.glitch portfolio
-          .left-text-box
-            .project-careers
-              p 프로젝트 이력
-               ul 
-                li KB국민은행 그룹 멤버십플랫폼 개발의뢰
-                li KB국민은행 태블릿 브랜치 금융투자 상품 판매 프로세스 구축
-                li 문구야놀자 웹/모바일 퍼블리싱(적응형)
-                li 웅진 딸기콩 랜딩페이지 웹/모바일 퍼블리싱(반응형)
-                li 웅진 딸기콩 관리자페이지 퍼블리싱(부트스트랩)
-                li 굿뜨래페이 랜딩페이지 웹/모바일 퍼블리싱(반응형)
-                li 굿뜨래페이 상생지원금 페이지 퍼블리싱(적응형)
-                li 인조이웍스 홈페이지 웹/모바일 퍼블리싱(반응형) 
-                li 포토이 인생사진 갤러리 모바일 퍼블리싱
-                //- li 스포키즈 메인 및 서브 페이지 디자인
-                li 태양광 햇빛마루 웹/모바일 퍼블리싱(적응형) 등..
-            .careers
-              p 경력
-              ul 
-                li 인픽스 (2022.06 ~ 재직중)
-                li 인조이웍스 (2021.01 ~ 2022.04)
-                li [프론트엔드]리액트(React.js 자바스크립트)_주말 (2022.01 ~ 2022.04)
-                li ui/ux 스마트웹&앱디자인(웹퍼블리싱&프론트엔드)실무과정 (2020.04 ~ 2020.10)
+      .content.design.bg-dark
+        .content-box
+          .title
+            p.glitch-02(data-title="text01") UI UX
+            h2.glitch-02(data-title="text02 · 0200202") Web publishier
+            h3.glitch-02(data-title="text03") portfolio
+        .content-box
+          h3 프로젝트 이력
+            ul 
+            li KB국민은행 그룹 멤버십플랫폼 개발의뢰
+            li KB국민은행 태블릿 브랜치 금융투자 상품 판매 프로세스 구축
+            li 문구야놀자 웹/모바일 퍼블리싱(적응형)
+            li 웅진 딸기콩 랜딩페이지 웹/모바일 퍼블리싱(반응형)
+            li 웅진 딸기콩 관리자페이지 퍼블리싱(부트스트랩)
+            li 굿뜨래페이 랜딩페이지 웹/모바일 퍼블리싱(반응형)
+            li 굿뜨래페이 상생지원금 페이지 퍼블리싱(적응형)
+            li 인조이웍스 홈페이지 웹/모바일 퍼블리싱(반응형) 
+            li 포토이 인생사진 갤러리 모바일 퍼블리싱
+            //- li 스포키즈 메인 및 서브 페이지 디자인
+            li 태양광 햇빛마루 웹/모바일 퍼블리싱(적응형) 등..
+          h3 경력
+            ul 
+              li 인픽스 (2022.06 ~ 재직중)
+              li 인조이웍스 (2021.01 ~ 2022.04)
+              li [프론트엔드]리액트(React.js 자바스크립트)_주말 (2022.01 ~ 2022.04)
+              li ui/ux 스마트웹&앱디자인(웹퍼블리싱&프론트엔드)실무과정 (2020.04 ~ 2020.10)
             
     section#content2.gallery-content
-      .gallery
-        .swiper.gallerySwiper 
-          .swiper-wrapper 
-            //- button.show(target="1") test
-            .swiper-slide.slide-one
-             .text-wrap 
-              h3.projecct-title 문구야 놀자
-              h4.project-type Adaptive Page Publishing
-              ul.tag-wrap
-                li #적응형 홈페이지
-                li #퍼블리싱 100%
-                li #구축
-              p.project-link
-                a(href="https://playmoongu.com/",target='_blank')
-              .img-wrap(onClick="openPopup('content01');")
-                img(src="./img/gallery01.png" alt="문구야놀자 포트폴리오")
-            .swiper-slide.slide-one
-              .text-wrap 
-                h3.projecct-title 문구야 놀자
-                h4.project-type Adaptive Page Publishing
-                ul.tag-wrap
-                  li #적응형 홈페이지
-                  li #퍼블리싱 100%
-                  li #구축
-                p.project-link
-                  a(href="https://playmoongu.com/",target='_blank')
-                .img-wrap(onClick="openPopup('content01');")
-                  img(src="./img/gallery01.png" alt="문구야놀자 포트폴리오")
+      .swiper.mainSwiper
+        .swiper-wrapper
+          mixin slide-content(className, subTitle, title, href, imgSrc, tagOne, tagTwo, tagThree, imgId)
+            div.swiper-slide(class=className)
+              .swiper-content
+                .text-box
+                  p= subTitle
+                  h2= title
+                  a.link(href=href, target="_blank")= href
+                  .tag-box 
+                    span.tag= tagOne
+                    span.tag= tagTwo
+                    span.tag= tagThree
+                .img-box
+                  img.btn_open(src=imgSrc, alt=subTitle, href=imgId)
+                if block
+                  block
+                
+          +slide-content('c-type01', '문구야 놀자', 'Adaptive Page Publishing', 'https://playmoongu.com/', './img/gallery01.png', '적응형 홈페이지', '퍼블리싱 100%', '구축', '#popup01')
+          +slide-content('c-type02', '딸기콩 관리자', 'Bootstrap Page Publishing', '관리자페이지', './img/gallery02.png', '부트스트랩', 'CSS커스텀', '관리자페이지')
+          +slide-content('c-type03', '딸기콩 랜딩페이지', 'Responsive Publishing', 'https://www.ddalgicong.com/', './img/gallery03.png', '반응형홈페이지', '미디어쿼리', '구축', 'id03')
+          +slide-content('c-type04', '굿뜨래페이 랜딩페이지', 'Responsive Publishing', 'https://goodtraepay.buyeo.go.kr/home/index.html/', './img/gallery04.png', '반응형홈페이지', '미디어쿼리', '유지보수', 'id03')
+          +slide-content('c-type05', '인조이웍스 홈페이지', 'Responsive Publishing', 'http://www.enjoyworks.co.kr/', './img/gallery05.png', '반응형홈페이지', '미디어쿼리', '구축', 'id03')
+          +slide-content('c-type06', '굿뜨래페이 상생지원금 홈페이지', 'Adaptive Page Publishing', '서비스종료', './img/gallery06.png', '적응형 홈페이지', '코로나 상생지원금', '구축', 'id03')
+          +slide-content('c-type07', '포토이 인생사진', 'Mobile Page Publishing', '개발진행중', './img/gallery07.png', '모바일 페이지', '인생네컷 갤러리', '구축', 'id03')
+          +slide-content('c-type08', '태양광 햇빛마루', 'Adaptive Page Publishing', 'https://www.sunnyseoul.com/citizen/index.do/', './img/gallery08.png', '적응형홈페이지', '미디어쿼리', '유지보수', 'id03')
 
 
-          .swiper-button-next
-          .swiper-button-prev
-          .swiper-pagination          
+      .swiper-button-next
+      .swiper-button-prev
 
-    script
-      var swiper = new Swiper(".gallerySwiper", {
-      pagination: {
-        // el: ".swiper-pagination",
-        // type: "fraction",
-        // type: "progressbar",
-      },
-      scrollbar: {
-            el: ".swiper-scrollbar",
-            hide: true,
-          },
+
+  script(src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js")
+  script.
+    var swiper = new Swiper(".mainSwiper", {
+      cssMode: true,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+      mousewheel: true,
+      keyboard: true,
     });
 
 

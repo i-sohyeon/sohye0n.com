@@ -151,3 +151,5 @@ const live = gulp.parallel([webserver, watch]); //parallel 두가지 task를 병
 export const build = gulp.series([assets]); //prepare 들어갈 자리
 export const dev = gulp.series([build, live]);
 export const deploy = gulp.series([build, gh]);
+
+exports.default = gulp.series('concat', [dev] );

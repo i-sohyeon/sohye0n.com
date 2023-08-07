@@ -1,5 +1,4 @@
 .left-text-box {
-  .project-careers {
     margin-bottom: 2.083vw;
     p, ul>li {
       animation: glitch02 2s infinite;
@@ -27,7 +26,6 @@
         }
       }
 
-  }
   .careers {
       p, ul>li {
         animation: glitch03 2s infinite;
@@ -76,4 +74,8 @@
       content: "-";
     }
   }
+}
+
+.glitch {
+  
 }
