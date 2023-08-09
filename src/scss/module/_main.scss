@@ -99,25 +99,40 @@ body {
               overflow: hidden;
               color: $white;
 
-              grid-template-columns: 2fr 3fr;
-              gap: px;
+              grid-template-columns: 4fr 3fr;
+              gap: 0px;
               .title {
                 color: $white !important;
-                h2, h3 {
+                h1 {
                   font-family:Orbitron;
-                  font-size: 60px;
                   text-transform: uppercase;
                 }
               }
             }
             &-box {
-              padding: 24px;
+              padding: 5.208vw 48px;
               &:first-child {
                 position: relative;
                 .title {
                   position: absolute;
                   top: 50%;
                   transform: translateY(-50%);
+                }
+              }
+              ul {
+                &.career-list {
+                  margin-bottom: 36px;
+                  &:last-child {
+                    margin-bottom: 0;
+                  }
+                  li {
+                    margin-bottom: 6px;
+
+                    @include fontSize (16px, 400);
+                    &:last-child {
+                      margin-bottom: 0;
+                    }
+                  }
                 }
               }
             }
@@ -194,10 +209,12 @@ body {
     .text-box {
       position: absolute;
       z-index: 1;
-      bottom: 150px;
+      bottom: 180px;
       left: 60px;
-      p{
-        margin-bottom: 5px;
+      h3{
+        font-size: 48px;
+        margin-bottom: 15px;
+        color: $white;
       }
       h2 {
         // margin-bottom: 40px;
@@ -212,8 +229,8 @@ body {
       right: 60px;
       overflow: hidden;
       box-sizing: border-box;
-      width: 650px;
-      height: 400px;
+      width: 62.5vw;
+      height: 35.417vw;
       cursor: pointer;
       border-radius: 10px;
       background: $black;
@@ -235,8 +252,9 @@ body {
         position: relative;
         display: inline-block;
         margin-right: 5px;
-        padding: 3px 3px 3px 15px;
-        border: 1px solid $black;
+        padding: 5px 5px 5px 16px;
+        color: $white;
+        border: 1px solid $white;
         border-radius: 2px;
         &:last-child {
           margin-right: 0;
@@ -250,4 +268,18 @@ body {
       }
     }
   }
+}
+h1{
+  @include fontSize(60px, 700);
+}
+h2{
+  @include fontSize(48px, 700);
+}
+h3{
+  @include fontSize(36px, 700);
+}
+h4{
+  margin-bottom: 10px;
+
+  @include fontSize (24px, 500);
 }

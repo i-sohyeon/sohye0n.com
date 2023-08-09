@@ -8,12 +8,13 @@ block content
       .content.design.bg-dark
         .content-box
           .title
-            p.glitch-02(data-title="text01") UI UX
-            h2.glitch-02(data-title="text02 · 0200202") Web publishier
-            h3.glitch-02(data-title="text03") portfolio
+            h1.glitch-02(data-title="UI · UX") UI &middot; UX
+            h1.glitch-02(data-title="Web publishier") Web publishier
+            h1.glitch-02(data-title="portfolio") portfolio
         .content-box
-          h3 프로젝트 이력
-            ul 
+          h4 프로젝트 이력
+          ul.career-list
+            li NH농협은행 올원뱅크 리뉴얼 구축
             li KB국민은행 그룹 멤버십플랫폼 개발의뢰
             li KB국민은행 태블릿 브랜치 금융투자 상품 판매 프로세스 구축
             li 문구야놀자 웹/모바일 퍼블리싱(적응형)
@@ -23,14 +24,14 @@ block content
             li 굿뜨래페이 상생지원금 페이지 퍼블리싱(적응형)
             li 인조이웍스 홈페이지 웹/모바일 퍼블리싱(반응형) 
             li 포토이 인생사진 갤러리 모바일 퍼블리싱
-            //- li 스포키즈 메인 및 서브 페이지 디자인
+            li 스포키즈 메인 및 서브 페이지 디자인
             li 태양광 햇빛마루 웹/모바일 퍼블리싱(적응형) 등..
-          h3 경력
-            ul 
-              li 인픽스 (2022.06 ~ 재직중)
-              li 인조이웍스 (2021.01 ~ 2022.04)
-              li [프론트엔드]리액트(React.js 자바스크립트)_주말 (2022.01 ~ 2022.04)
-              li ui/ux 스마트웹&앱디자인(웹퍼블리싱&프론트엔드)실무과정 (2020.04 ~ 2020.10)
+          h4 경력
+          ul.career-list
+            li 인픽스 (2022.06 ~ 재직중)
+            li 인조이웍스 (2021.01 ~ 2022.04)
+            li [프론트엔드]리액트(React.js 자바스크립트)_주말 (2022.01 ~ 2022.04)
+            li ui/ux 스마트웹&앱디자인(웹퍼블리싱&프론트엔드)실무과정 (2020.04 ~ 2020.10)
             
     section#content2.gallery-content
       .swiper.mainSwiper
@@ -39,13 +40,14 @@ block content
             div.swiper-slide(class=className)
               .swiper-content
                 .text-box
-                  p= subTitle
+                  h3= subTitle
                   h2= title
-                  a.link(href=href, target="_blank")= href
                   .tag-box 
                     span.tag= tagOne
                     span.tag= tagTwo
                     span.tag= tagThree
+                  a.link(href=href, target="_blank")= href
+
                 .img-box
                   img.btn_open(src=imgSrc, alt=subTitle, href=imgId)
                 if block
